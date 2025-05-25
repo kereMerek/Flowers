@@ -1052,36 +1052,39 @@ body {
 
 /* Mobil cihazlar için genel gövde ayarları */
 body.mobile {
-  font-size: 16px;
+  font-size: 18px; /* Biraz daha büyüttüm */
   padding: 15px;
-  background-color: #1e003d; /* Koyu mor tonuna uygun arka plan */
-  color: #ddd; /* Açık renk yazı */
+  background-color: #1e003d; /* Koyu mor tonu */
+  color: #ddd;
   line-height: 1.5;
+  overflow-x: hidden; /* Yatay kaydırma engelle */
 }
 
-/* Örnek: mobilde bazı elementleri tam genişlik yap */
+/* Mobilde tüm container genişliği */
 body.mobile .container {
   width: 100%;
-  padding: 0 10px;
+  max-width: 100vw; /* Taşmayı engelle */
+  padding: 0 15px; /* Daha geniş padding */
+  box-sizing: border-box;
 }
 
-/* Örnek: mobil menü daha büyük butonlar */
+/* Mobil menü butonları büyütüldü */
 body.mobile nav button {
-  font-size: 18px;
-  padding: 12px 20px;
+  font-size: 20px;
+  padding: 14px 24px;
 }
 
-/* Örnek: mobilde gizlenmesini istediğin elementler */
+/* Masaüstüye özel gizleme */
 body.mobile .desktop-only {
-  display: none;
+  display: none !important;
 }
 
-/* Örnek: mobilde görünmesini istediğin elementler */
+/* Mobilde gösterilecekler */
 body.mobile .mobile-only {
-  display: block;
+  display: block !important;
 }
 
-/* Responsive görsel ayar */
+/* Responsive görseller */
 body.mobile img {
   max-width: 100%;
   height: auto;
@@ -1089,21 +1092,22 @@ body.mobile img {
   margin: 0 auto;
 }
 
-/* Başlıkları mobilde biraz büyüt */
+/* Başlıklar daha büyük ve rahat okunur */
 body.mobile h1, 
 body.mobile h2, 
 body.mobile h3 {
-  font-weight: 600;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  font-weight: 700;
+  margin-top: 1.2em;
+  margin-bottom: 0.7em;
+  font-size: 1.8rem;
 }
 
-/* Örnek buton stili */
+/* Buton stili */
 body.mobile button {
   background-color: #6e15aa;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -1111,3 +1115,20 @@ body.mobile button {
 body.mobile button:hover {
   background-color: #8a2be2;
 }
+
+/* Ayrıca bazı özel elementler için örnek genişletme */
+body.mobile .flower__g-right .leaf,
+body.mobile .flower__g-fr .leaf {
+  width: 60vw;  /* Genişliği artırdım */
+  height: 80vh;
+  border-left-width: 1vmin;
+  border-radius: 50% 0 0 50% / 100% 100% 0 0; /* Hafif yuvarlatma */
+}
+
+/* Container genel ayar */
+.container {
+  max-width: 100vw;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
