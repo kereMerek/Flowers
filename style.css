@@ -1049,3 +1049,65 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Mobil cihazlar için genel gövde ayarları */
+body.mobile {
+  font-size: 16px;
+  padding: 15px;
+  background-color: #1e003d; /* Koyu mor tonuna uygun arka plan */
+  color: #ddd; /* Açık renk yazı */
+  line-height: 1.5;
+}
+
+/* Örnek: mobilde bazı elementleri tam genişlik yap */
+body.mobile .container {
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Örnek: mobil menü daha büyük butonlar */
+body.mobile nav button {
+  font-size: 18px;
+  padding: 12px 20px;
+}
+
+/* Örnek: mobilde gizlenmesini istediğin elementler */
+body.mobile .desktop-only {
+  display: none;
+}
+
+/* Örnek: mobilde görünmesini istediğin elementler */
+body.mobile .mobile-only {
+  display: block;
+}
+
+/* Responsive görsel ayar */
+body.mobile img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Başlıkları mobilde biraz büyüt */
+body.mobile h1, 
+body.mobile h2, 
+body.mobile h3 {
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Örnek buton stili */
+body.mobile button {
+  background-color: #6e15aa;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.mobile button:hover {
+  background-color: #8a2be2;
+}
